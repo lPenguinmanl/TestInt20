@@ -6,7 +6,8 @@ export default class DishRecipe extends Component {
   render() {
     return (
       <div className="dishrecipe">
-        <span>Тут повинен бути рецепт</span>
+        <h3 className="htext">рецепт</h3>
+        <span className="rectext">Тут повинен бути рецепт</span>
       </div>
     );
   }

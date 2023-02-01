@@ -5,15 +5,20 @@ import "./product-list.css";
 
 const ProdLi = () => {
   return (
-    <div className="row align-items-start">
-      <div className="col-sm-12 col-md-6 col-lg-4">
-        <ProdIt />
+    <div className="prodli">
+      <div className="justify-content-center prodlicont">
+        <span>Назва страви</span>
       </div>
-      <div className="col-sm-12 col-md-6 col-lg-4">
-        <ProdIt />
-      </div>
-      <div className="col-sm-12 col-md-6 col-lg-4">
-        <ProdIt />
+      <div className="row align-items-start prodlicont">
+        <div className="col-sm-12 col-md-6 col-lg-4 licont">
+          <ProdIt />
+        </div>
+        <div className="col-sm-12 col-md-6 col-lg-4 licont">
+          <ProdIt />
+        </div>
+        <div className="col-sm-12 col-md-6 col-lg-4 licont">
+          <ProdIt />
+        </div>
       </div>
     </div>
   );
