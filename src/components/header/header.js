@@ -8,9 +8,10 @@ const Header = () => {
             <div className="col-sm-0 col-md-1 col-lg-2"></div>
             <div className="col-sm-12 col-md-10 col-lg-8">
                 <div className="grid gridHeader">
-                    <div class="g-col-4">INT20</div>
-                    <div class="g-col-4">Home</div>
-                    <div class="g-col-4">Meel</div>
+                    <div class="g-col-3">INT20</div>
+                    <dvi className="g-col-3"></dvi>
+                    <div class="g-col-3">Home</div>
+                    <div class="g-col-3">Meel</div>
                 </div>
             </div>
             <div className="col-sm-0 col-md-1 col-lg-2"></div>
