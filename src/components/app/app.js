@@ -1,10 +1,9 @@
 import './app.css';
+import DropMealFilter from '../drop-meal-fiter';
 
 function App() {
   return (
-    <div>
-      INT20
-    </div>
+      <DropMealFilter/>
   );
 }
 
