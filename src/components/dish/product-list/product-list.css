@@ -1,0 +1,11 @@
+.prodli {
+  display: flex;
+  flex-direction: column;
+}
+.prodlicont {
+  margin: 1rem 0rem 1rem 0rem;
+}
+.licont {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}

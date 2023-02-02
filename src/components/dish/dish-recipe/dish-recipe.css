@@ -1,0 +1,11 @@
+.dishrecipe {
+  border: 1rem;
+  border-color: brown;
+  padding: 1rem;
+}
+.htext {
+  text-transform: uppercase;
+}
+.rectext {
+  font-size: large;
+}
