@@ -1,0 +1,14 @@
+.header {
+    background-color: blue;
+    display: flex;
+    text-align: center;
+}
+.gridHeader {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.gridHeader div{
+    padding: 0rem 1rem 0rem 1rem;
+    flex: 30%;
+}

@@ -1,9 +1,15 @@
+import React from 'react';
+
+import Header from '../header';
+
 import './app.css';
 import DropMealFilter from '../drop-meal-fiter';
 
 function App() {
   return (
-      <DropMealFilter/>
+    <div>
+      <Header/>
+    </div>
   );
 }
 
