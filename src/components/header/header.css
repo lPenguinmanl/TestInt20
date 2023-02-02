@@ -4,12 +4,14 @@
   max-height: 70px;
   height: 100%;
   margin: 1rem 0rem 1rem 0rem;
-
+  display: flex;
   border-bottom: solid 0.1rem black;
 }
 .header div p {
   text-align: center;
   justify-content: center;
+  font-family: Josefin Sans, "Source Sans Pro";
+  font-size: 1.2rem;
 }
 .header div input {
   width: 100%;
