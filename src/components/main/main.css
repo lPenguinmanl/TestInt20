@@ -1,0 +1,28 @@
+.main-welc {
+  background-image: url(../main/ad2935d1760be0c780beb158ef8c465b.jfif);
+  background-size: 100%;
+  height: 600px;
+  justify-content: center;
+  text-align: center;
+}
+.main-welc h1 {
+  padding-top: 10rem;
+  font-family: "Cormorant Infant";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 97px;
+  /* identical to box height */
+  text-align: center;
+  text-transform: uppercase;
+  color: aliceblue;
+}
+.main-welc p {
+  font-family: "Cormorant Infant";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  color: aliceblue;
+}
