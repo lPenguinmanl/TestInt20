@@ -1,9 +1,12 @@
+
 import React from "react";
 import Dish from "../dish/dish";
+import DropMealFilter from '../drop-meal-fiter';
 import Header from "../header";
 import Main from "../main";
-
 import "./app.css";
+
+
 
 const App = () => {
   return (
@@ -16,7 +19,6 @@ const App = () => {
         <div className="col-1 col-sm-1 col-md-2 col-lg-2"></div>
       </div>
     </div>
-  );
-};
-
+  )
+}
 export default App;
