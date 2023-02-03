@@ -10,9 +10,11 @@ const App = () => {
     <div className="app">
       <Header />
       <Main />
-      <div className="row">
+      <div className="row list-m">
         <div className="col-1 col-sm-1 col-md-2 col-lg-2"></div>
-        <div className="col-10 col-sm-10 col-md-8 col-lg-8"></div>
+        <div className="col-10 col-sm-10 col-md-8 col-lg-8 ">
+          <Dish />
+        </div>
         <div className="col-1 col-sm-1 col-md-2 col-lg-2"></div>
       </div>
     </div>

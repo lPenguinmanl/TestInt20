@@ -1,12 +1,15 @@
-.main-welc {
-  background-image: url(../main/ad2935d1760be0c780beb158ef8c465b.jfif);
-  background-size: 100%;
-  height: 600px;
+* {
+  transition: all 0.2s;
+}
+.main-img {
+  /* background-image: url(../main/ad2935d1760be0c780beb158ef8c465b.png); */
+  /* background-size: 100%; */
+  max-height: 600px;
+  width: 100%;
   justify-content: center;
   text-align: center;
 }
-.main-welc h1 {
-  padding-top: 10rem;
+.main-text h1 {
   font-family: "Cormorant Infant";
   font-style: normal;
   font-weight: 700;
@@ -16,8 +19,9 @@
   text-align: center;
   text-transform: uppercase;
   color: aliceblue;
+  text-shadow: 1px 1px 1px #000;
 }
-.main-welc p {
+.main-text p {
   font-family: "Cormorant Infant";
   font-style: normal;
   font-weight: 400;
@@ -25,4 +29,56 @@
   line-height: 48px;
   text-align: center;
   color: aliceblue;
+  text-shadow: 1px 1px 1px #000;
+}
+.main-img img {
+  display: flex;
+  width: 100%;
+}
+.main-text {
+  text-align: center;
+  position: relative;
+  top: -70rem;
+}
+
+@media only screen and (max-width: 480px) {
+  .main-text {
+    position: relative;
+    top: -18rem;
+  }
+  .main-text p {
+    font-size: 20px;
+    font-weight: 300;
+  }
+  .main-text h1 {
+    font-weight: 300;
+    font-size: 40px;
+  }
+  .main-img {
+    height: 260px;
+  }
+}
+@media only screen and (max-width: 770px) and (min-width: 480px) {
+  .main-text {
+    position: relative;
+    top: -30rem;
+  }
+  .main-text p {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .main-img {
+    max-height: 400px;
+  }
+}
+@media only screen and (max-width: 1025px) and (min-width: 770px) {
+  .main-text {
+    position: relative;
+    top: -35rem;
+  }
+}
+@media only screen and (max-width: 1440px) and (min-width: 1025px) {
+  .main-img {
+    max-height: 500px;
+  }
 }

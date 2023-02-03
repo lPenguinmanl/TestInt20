@@ -38,7 +38,13 @@
 }
 .app {
   height: 2000px;
+  width: 100%;
+  overflow: hidden;
 }
 .row {
   height: 100%;
+}
+.list-m {
+  background-color: white;
+  position: relative;
 }
