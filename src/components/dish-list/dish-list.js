@@ -9,7 +9,7 @@ const DishList = ({ data }) => {
   const elements = data.map((item) => {
     const { meal_id, ...itemProps } = item;
     return (
-      <li key={meal_id}>
+      <li key={meal_id} className="dish-main-list-item">
         <DishItem {...itemProps} />
       </li>
     );
