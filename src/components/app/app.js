@@ -1,21 +1,20 @@
-
 import React from "react";
 import Dish from "../dish/dish";
-import DropMealFilter from '../drop-meal-fiter';
+import Header from "../header";
+import Main from "../main";
+
 import "./app.css";
 
 const App = () => {
   return (
     <div className="app">
-    <DropMealFilter/>
-      <div className="row">
-        <div className="col-1 col-sm-1 col-md-2 col-lg-3"></div>
-        <div className="col-10 col-sm-10 col-md-8 col-lg-6">
-          <Dish />
-        </div>
-        <div className="col-1 col-sm-1 col-md-2 col-lg-3"></div>
-      </div>
+      <Header />
+      <Main />
+      <footer>
+        <p>hyeta</p>
+      </footer>
     </div>
-  )
-}
+  );
+};
+
 export default App;

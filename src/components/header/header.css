@@ -1,14 +1,120 @@
 .header {
-    background-color: blue;
-    display: flex;
-    text-align: center;
+  justify-content: center;
+  width: 100%;
+  max-height: 70px;
+  height: 100%;
+  margin: 0rem;
+  display: flex;
+  border-bottom: solid 0.1rem black;
 }
-.gridHeader {
-    display: flex;
+.hrefmain,
+.hrefdish,
+.hrefprod {
+  color: black;
+  text-decoration: none;
+  padding-top: 1rem;
+  text-align: center;
+  justify-content: center;
+  font-family: Josefin Sans, "Source Sans Pro";
+  font-size: 1.2rem;
+}
+.search input {
+  height: 50%;
+  margin-top: 1rem;
+  width: 100%;
+  font-family: Josefin Sans, FontAwesome;
+}
+.butadd {
+  background-color: white;
+  max-height: 50px;
+  text-align: center;
+  justify-content: center;
+  border: solid 0.1rem black;
+  margin: auto;
+  border-radius: 1rem;
+}
+.header div {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.header div button p {
+  justify-content: center;
+  text-align: center;
+  margin: 0rem;
+  font-family: Josefin sans;
+  font-size: 1.2rem;
+}
+.search {
+  display: flex;
+  flex-direction: row;
+  border: solid 0.1rem black;
+  border-radius: 0.5rem;
+  max-height: 2.5rem;
+  text-align: center;
+  justify-content: center;
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 400px;
+}
+.search input,
+.search button {
+  border: none;
+  outline: none;
+  background-color: white;
+}
+.search button {
+  margin-left: 0.25rem;
+}
+.search input {
+  display: flex;
+  margin-top: 10px;
+}
+@media only screen and (max-width: 470px) {
+  .header div a {
     text-align: center;
     justify-content: center;
+    font-family: Josefin Sans, "Source Sans Pro";
+    font-size: 1.2rem;
+  }
+  .hrefmain,
+  .hrefdish {
+    padding-top: 14px;
+  }
+  .hrefprod {
+    line-height: 1.5rem;
+    padding-top: 5px;
+  }
+  .butaddp {
+    padding: 0px;
+    line-height: 1.5rem;
+  }
 }
-.gridHeader div{
-    padding: 0rem 1rem 0rem 1rem;
-    flex: 30%;
+@media only screen and (max-width: 770px) and (min-width: 470px) {
+  .butaddp {
+    padding: 2px;
+    line-height: 1rem;
+  }
+}
+@media only all and (max-width: 1024px) and (min-width: 770px) {
+  .butaddp {
+    padding: 2px;
+    line-height: 1.3rem;
+  }
+}
+@media only all and (max-width: 1440px) and (min-width: 1024px) {
+  .hrefprod {
+    line-height: 1.5rem;
+    padding-top: 10px;
+  }
+  .hrefmain {
+    padding-top: 22px;
+  }
+  .hrefdish {
+    padding-top: 22px;
+  }
+  .butaddp {
+    padding: 4px;
+    line-height: 1.3rem;
+  }
 }
