@@ -25,6 +25,7 @@ export class App extends Component {
               <Route path="/" element={<Main />} />
               <Route path="/dishes" element={<Dishes />} />
               <Route path="/fridge" element={null} />
+              <Route path="/dish" element={<Dish />} />
               <Route
                 path="/dish/:id"
                 render={({ match }) => {

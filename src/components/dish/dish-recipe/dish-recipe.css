@@ -1,11 +1,17 @@
-.dishrecipe {
-  border: 1rem;
-  border-color: brown;
-  padding: 1rem;
+.dish-recipe-div {
+  justify-content: start;
 }
-.htext {
-  text-transform: uppercase;
+.dish-recipe-div h3 {
+  font-family: "Cormorant Infant";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 6vmin;
+  color: #123f0a;
 }
-.rectext {
-  font-size: large;
+.dish-recipe {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 120%;
 }
