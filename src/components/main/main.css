@@ -16,17 +16,12 @@
 }
 
 .main-img {
+  overflow: hidden;
   max-height: 50vmin;
   width: 100%;
   justify-content: center;
   text-align: center;
   position: relative;
-}
-.main-img::after {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 1);
 }
 .main-text h1 {
   font-family: "Cormorant Infant";
@@ -52,6 +47,7 @@
   line-height: 5vmin;
 }
 .main-img img {
+  filter: brightness(40%);
   display: flex;
   width: 100%;
 }

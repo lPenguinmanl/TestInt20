@@ -1,5 +1,6 @@
 import React from "react";
 import Dish from "../dish/dish";
+import Dishes from "../dishes/dishes";
 import Header from "../header";
 import Main from "../main";
 
@@ -9,10 +10,7 @@ const App = () => {
   return (
     <div className="app">
       <Header />
-      <Main />
-      <footer>
-        <p>hyeta</p>
-      </footer>
+      <Dishes />
     </div>
   );
 };

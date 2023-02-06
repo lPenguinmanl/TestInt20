@@ -1,0 +1,15 @@
+.dishes-img {
+  width: 100%;
+  filter: brightness(40%);
+}
+.dishes-div-img-text {
+  width: 100%;
+  max-height: 50vmin;
+  overflow: hidden;
+}
+.dishes-text {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+}
