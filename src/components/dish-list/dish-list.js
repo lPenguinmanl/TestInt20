@@ -1,22 +1,25 @@
 import React from "react";
+import MealService from "../../services/dummy-service";
 import DishItem from "./dish-item/dish-item";
-
-import "./dish-list.css";
 import DishMainImg from "./dish-main-img/dish-main-img";
+import { withData } from "../hoc-helpers";
+import "./dish-list.css";
 
-const DishList = () => {
+const DishList = ({ data }) => {
+  const elements = data.map((item) => {
+    const { meal_id, ...itemProps } = item;
+    return (
+      <li key={meal_id}>
+        <DishItem {...itemProps} />
+      </li>
+    );
+  });
   return (
     <div className="dish-main-list">
-      <DishItem />
-      <DishItem />
-      <DishItem />
-      <DishItem />
-      <DishItem />
-      <DishItem />
-      <DishItem />
+      {elements}
       <DishMainImg />
     </div>
   );
 };
-
-export default DishList;
+const { getAllDishes } = new MealService();
+export default withData(DishList, getAllDishes);
