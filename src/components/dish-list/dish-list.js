@@ -1,5 +1,5 @@
 import React from "react";
-import MealService from "../../services/dummy-service";
+import MealService from "../../services/service";
 import DishItem from "./dish-item/dish-item";
 import DishMainImg from "./dish-main-img/dish-main-img";
 import { withData } from "../hoc-helpers";
@@ -21,5 +21,5 @@ const DishList = ({ data }) => {
     </div>
   );
 };
-const { getAllDishes } = new MealService();
-export default withData(DishList, getAllDishes);
+const { getMeal } = new MealService();
+export default withData(DishList, getMeal);

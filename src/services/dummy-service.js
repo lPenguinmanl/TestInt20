@@ -1,4 +1,4 @@
-export default class MealService {
+class MealService {
   getAllDishes = async () => {
     return [
       {
