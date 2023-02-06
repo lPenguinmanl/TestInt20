@@ -2,13 +2,14 @@ import React from "react";
 import ListDif from "../dish-item-dif";
 import "./dish-item.css";
 
-const DishItem = () => {
+const DishItem = ({ meal_name, meal_image, difficulty }) => {
+  const imageUrl = meal_image ? meal_image : "https://cutt.ly/93rLjy2";
   return (
     <div className="dish-list-item">
       <div className="dish-list-div">
-        <img className="dish-list-img" src="https://cutt.ly/93rLjy2"></img>
-        <h4>salad</h4>
-        <ListDif />
+        <img className="dish-list-img" src={imageUrl}></img>
+        <h4>{meal_name}</h4>
+        <ListDif compl={difficulty} />
         <button className="dish-list-button">Review</button>
       </div>
     </div>
