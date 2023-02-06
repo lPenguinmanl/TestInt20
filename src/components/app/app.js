@@ -1,5 +1,6 @@
 import React from "react";
 import Dishes from "../dishes/dishes";
+import Dish from "../dish/dish";
 import Header from "../header";
 import Main from "../main";
 import { Routes, Route } from "react-router-dom";
@@ -14,6 +15,13 @@ const App = () => {
         <Route path="/" element={<Main />} />
         <Route path="/dishes" element={<Dishes />} />
         <Route path="/fridge" element={null} />
+        <Route
+          path="/dish/:id"
+          render={({ match }) => {
+            const { id } = match.params;
+            return <Dish itemId={id} />;
+          }}
+        />
       </Routes>
     </div>
   );
