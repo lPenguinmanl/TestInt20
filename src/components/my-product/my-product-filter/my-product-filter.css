@@ -1,15 +1,16 @@
 .my-product-filter-button {
   background-color: #e1efe1;
-  width: 10vmin;
-  height: 4vmin;
+  width: 7rem;
+  height: 2.5rem;
   margin-right: 4vmin;
+  margin-top: 1rem;
   border: none;
 }
 .my-product-filter-button p {
   font-family: "Josefin Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: 2vmin;
+  font-size: 1rem;
   line-height: 2vmin;
   text-align: center;
   color: #123f0a;
@@ -27,4 +28,7 @@
 .my-product-filter {
   display: flex;
   flex-wrap: row wrap;
+}
+.my-product-filter-text {
+  margin-top: 1rem;
 }
