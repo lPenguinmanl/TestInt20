@@ -2,17 +2,21 @@ import React from "react";
 
 import "./product-list.css";
 
-const ProdLi = () => {
+const ProdLi = ({ products }) => {
+  const elements = products.map(({ name, amount, measure, stored_amount }) => {
+    const cls = amount >= stored_amount ? "prod-li-yes" : "prod-li";
+    return (
+      <li className={cls}>
+        <span>
+          {name} {amount} {measure}
+        </span>
+      </li>
+    );
+  });
   return (
     <div className="prod-lu-div">
       <h3>The ingredients:</h3>
-      <ul className="prod-lu">
-        <li className="prod-li">
-          ingredient1 reagd fgsdfgs dfgsdfg dfasdfasdrf
-        </li>
-        <li className="prod-li-yes">ingredient1 </li>
-        <li className="prod-li">ingredient1 </li>
-      </ul>
+      <ul className="prod-lu">{elements}</ul>
     </div>
   );
 };

@@ -3,7 +3,7 @@ import Dishes from "../dishes/dishes";
 import Dish from "../dish/dish";
 import Header from "../header";
 import Main from "../main";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
 import "./app.css";
 import ErrorBoundry from "../error-boundry/error-boundry";
 
@@ -11,6 +11,10 @@ export default class App extends Component {
   // mealService = new MealService();
 
   render() {
+    const DishWraper = () => {
+      const { id } = useParams();
+      return <Dish itemId={id} />;
+    };
     return (
       <ErrorBoundry>
         <BrowserRouter>
@@ -21,15 +25,15 @@ export default class App extends Component {
               <Route path="/" element={<Main />} />
               <Route path="/dishes" element={<Dishes />} />
               <Route path="/fridge" element={null} />
-              <Route path="/dish" element={<Dish itemId={6} />} />
-              <Route
-                path="/dish/:id"
-                render={({ match }) => {
-                  const { id } = match.params;
-                  console.log(id);
-                  return <Dish itemId={id} />;
-                }}
-              />
+              {/* <Route
+                path="/dish"
+                element={
+                  <ErrorBoundry>
+                    <Dish itemId={4} />
+                  </ErrorBoundry>
+                }
+              /> */}
+              <Route path="/dish/:id" element={<Dish itemId={4} />} />
             </Routes>
           </div>
           {/* </MealServiceProvider> */}
