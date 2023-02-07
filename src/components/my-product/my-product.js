@@ -14,13 +14,38 @@ class MyProd extends Component {
   onSetFilter = (filter) => {
     this.setState({ filter });
   };
+  onUpdateProduct = (e, item) => {
+    const {
+      ingredient_id,
+      name,
+      measure,
+      ingredient_image,
+      expiry_date,
+      category,
+    } = item;
+    const data = {
+      name: name,
+      image: ingredient_image,
+      category: category,
+      stored_amount: e.target.amount.value,
+      measure: measure,
+      expiry_date: expiry_date,
+    };
+    putIngredient(ingredient_id, data);
+    e.preventDefault();
+  };
+
   render() {
     const { data } = this.props;
     const elements = data.map((item) => {
-      const { ingredient_id, ...itemProps } = item;
+      const { ingredient_id } = item;
       return (
         <li key={ingredient_id} className="dish-main-list-item">
-          <ProdItem filter={this.state.filter} {...itemProps} />
+          <ProdItem
+            filter={this.state.filter}
+            item={item}
+            onUpdateProduct={this.onUpdateProduct}
+          />
         </li>
       );
     });
@@ -44,5 +69,6 @@ class MyProd extends Component {
     );
   }
 }
-const { getIngredient } = new MealService();
+
+const { getIngredient, putIngredient } = new MealService();
 export default withData(MyProd, getIngredient);

@@ -1,7 +1,6 @@
 import React from "react";
 import MealService from "../../services/service-new";
 import DishItem from "./dish-item/dish-item";
-import DishMainImg from "./dish-main-img/dish-main-img";
 import { withData } from "../hoc-helpers";
 import "./dish-list.css";
 import ErrorBoundry from "../error-boundry/error-boundry";
@@ -31,8 +30,8 @@ const DishList = ({
     })
     .filter((el) => {
       const { difficulty } = el;
-      if (dfilter == 0) return true;
-      return difficulty == dfilter;
+      if (dfilter === 0) return true;
+      return difficulty === dfilter;
     })
     .filter(({ receipts }) => {
       if (!canCook) return true;
