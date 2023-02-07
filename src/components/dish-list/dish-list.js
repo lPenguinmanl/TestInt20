@@ -6,6 +6,10 @@ import { withData } from "../hoc-helpers";
 import "./dish-list.css";
 import ErrorBoundry from "../error-boundry/error-boundry";
 
+// canCook(arr){
+//   arr
+// }
+
 const DishList = ({ data, num, view, canCook, dfilter, search = "" }) => {
   // const num = 7; // number of elements we want to get
   const shuffledArray = data.sort(() => 0.5 - Math.random()); // shuffles array

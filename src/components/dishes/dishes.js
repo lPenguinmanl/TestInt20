@@ -8,7 +8,7 @@ import "./dishes.css";
 export default class Dishes extends Component {
   state = {
     dfilter: 0,
-    canCook: true,
+    canCook: false,
   };
   onOstendFilter = (canCook) => {
     this.setState({ canCook });
@@ -16,11 +16,12 @@ export default class Dishes extends Component {
   onDifficultyFilter = (dfilter) => {
     this.setState({ dfilter });
   };
-  // onClearFilter = ()=>{
-  //   this.setState({
-  //     dfilter
-  //   })
-  // }
+  onClearFilter = () => {
+    this.setState({
+      dfilter: 0,
+      canCook: false,
+    });
+  };
   render() {
     const { dfilter, canCook } = this.state;
     const { search } = this.props;
@@ -40,7 +41,10 @@ export default class Dishes extends Component {
             <div className="grid text-center filter">
               <div className="g-col-12 g-col-sm-12 g-col-md-6 g-col-lg-6 filter-ostend">
                 <h2>Ostend:</h2>
-                <OstendFilter onOstendFilter={this.onOstendFilter} />
+                <OstendFilter
+                  onOstendFilter={this.onOstendFilter}
+                  onClearFilter={this.onClearFilter}
+                />
               </div>
               <div className="g-col-12 g-col-sm-12 g-col-md-6 g-col-lg-6 filter-complexity">
                 <h2>Complexity:</h2>
