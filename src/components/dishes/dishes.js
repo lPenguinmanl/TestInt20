@@ -48,7 +48,10 @@ export default class Dishes extends Component {
               </div>
               <div className="g-col-12 g-col-sm-12 g-col-md-6 g-col-lg-6 filter-complexity">
                 <h2>Complexity:</h2>
-                <ComplFilter onDifficultyFilter={this.onDifficultyFilter} />
+                <ComplFilter
+                  onDifficultyFilter={this.onDifficultyFilter}
+                  dfilter={dfilter}
+                />
               </div>
             </div>
             <DishList search={search} dfilter={dfilter} canCook={canCook} />
