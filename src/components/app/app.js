@@ -4,13 +4,7 @@ import Dish from "../dish/dish";
 import Header from "../header";
 import Main from "../main";
 import ScrollToTop from "../scrol-to-top";
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  useParams,
-  Switch,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
 import ErrorBoundry from "../error-boundry/error-boundry";
 import MyProd from "../my-product/my-product";
 import Footer from "../footer/footer";
