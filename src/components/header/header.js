@@ -5,6 +5,7 @@ import "./header.css";
 
 export default class Header extends Component {
   render() {
+    const { searchItems } = this.props;
     return (
       <div className="row header">
         <div className="col-0 col-md-1 col-lg-2"></div>
@@ -33,7 +34,11 @@ export default class Header extends Component {
             <button>
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
-            <input type="search" placeholder="Start typing.."></input>
+            <input
+              type="search"
+              placeholder="Start typing.."
+              onChange={(e) => searchItems(e.target.value)}
+            ></input>
           </form>
         </div>
         <div className="col-0 col-md-1 col-lg-2"></div>
