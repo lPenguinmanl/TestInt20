@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import MealService from "../../services/service-new";
 import { withData } from "../hoc-helpers";
-import AddButton from "./add-button/add-button";
 import MyProdFilter from "./my-product-filter/my-product-filter";
 import ProdItem from "./product-item";
 

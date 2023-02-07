@@ -19,9 +19,11 @@ const ProdItem = ({
       <div className="product-item-text">
         <img className="product-item-img" src={ingredient_image}></img>
         <h3 className="product-item-name">{name}</h3>
-        <h4 className="product-item-value">
-          {stored_amount} {measure}
-        </h4>
+        <input
+          className="product-item-value"
+          type="number"
+          placeholder={`${stored_amount} ${measure}`}
+        ></input>
         <span className={cls}>{expiry_date}</span>
       </div>
     </div>
