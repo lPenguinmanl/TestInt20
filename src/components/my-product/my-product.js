@@ -37,7 +37,6 @@ class MyProd extends Component {
         </div>
         <div className="filter-product">
           <MyProdFilter onSetFilter={this.onSetFilter} />
-          <AddButton />
         </div>
         <div className="my-product-list">{elements}</div>
 
