@@ -3,7 +3,13 @@ import Dishes from "../dishes/dishes";
 import Dish from "../dish/dish";
 import Header from "../header";
 import Main from "../main";
-import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  useParams,
+  Switch,
+} from "react-router-dom";
 import "./app.css";
 import ErrorBoundry from "../error-boundry/error-boundry";
 import MyProd from "../my-product/my-product";
@@ -12,10 +18,6 @@ export default class App extends Component {
   // mealService = new MealService();
 
   render() {
-    const DishWraper = () => {
-      const { id } = useParams();
-      return <Dish itemId={id} />;
-    };
     return (
       <ErrorBoundry>
         <BrowserRouter>
@@ -34,7 +36,8 @@ export default class App extends Component {
                   </ErrorBoundry>
                 }
               /> */}
-              <Route path="/dish/:id" element={<Dish itemId={4} />} />
+
+              <Route path="/dish/:id" element={<DishWraper />} />
             </Routes>
           </div>
           {/* </MealServiceProvider> */}
@@ -43,3 +46,8 @@ export default class App extends Component {
     );
   }
 }
+
+const DishWraper = () => {
+  const { id } = useParams();
+  return <Dish itemId={id} />;
+};
