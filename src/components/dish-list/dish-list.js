@@ -10,7 +10,14 @@ import ErrorBoundry from "../error-boundry/error-boundry";
 //   arr
 // }
 
-const DishList = ({ data, num, view, canCook, dfilter, search = "" }) => {
+const DishList = ({
+  data,
+  num,
+  view,
+  canCook = false,
+  dfilter = 0,
+  search = "",
+}) => {
   // const num = 7; // number of elements we want to get
   const shuffledArray = data.sort(() => 0.5 - Math.random()); // shuffles array
   const resData = shuffledArray.slice(0, num);
