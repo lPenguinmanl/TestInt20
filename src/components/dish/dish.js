@@ -3,6 +3,7 @@ import DishImg from "./dish-img/dish-img";
 import ProdLi from "./product-list";
 import DishRecipe from "./dish-recipe";
 import DishItem from "../dish-list/dish-item/dish-item";
+import DishList from "../dish-list";
 
 import "./dish.css";
 
@@ -21,10 +22,7 @@ export default class Dish extends Component {
           <DishRecipe />
           <h3 className="try-it">Also try it:</h3>
           <div className="dish-try-it">
-            <DishItem />
-            <DishItem />
-            <DishItem />
-            <DishItem />
+            <DishList num={3} />
           </div>
         </div>
         <div className="background-dish"> .</div>
