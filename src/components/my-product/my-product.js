@@ -3,6 +3,7 @@ import MealService from "../../services/service-new";
 import { withData } from "../hoc-helpers";
 import MyProdFilter from "./my-product-filter/my-product-filter";
 import ProdItem from "./product-item";
+import MapProd from "./map-product/map-product";
 
 import "./my-product.css";
 
@@ -63,6 +64,7 @@ class MyProd extends Component {
           <MyProdFilter onSetFilter={this.onSetFilter} />
         </div>
         <div className="my-product-list">{elements}</div>
+        <MapProd />
       </div>
     );
   }
