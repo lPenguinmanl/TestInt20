@@ -37,7 +37,7 @@ export default class App extends Component {
                 }
               /> */}
 
-              <Route path="/dish/:id" element={<DishWraper />} />
+              <Route path="/dishes/:id" element={<DishWraper />} />
             </Routes>
           </div>
           {/* </MealServiceProvider> */}

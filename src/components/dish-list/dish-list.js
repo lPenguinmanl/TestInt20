@@ -15,7 +15,7 @@ const DishList = ({ data, num, view }) => {
     const { meal_id, ...itemProps } = item;
     return (
       <li key={meal_id} className="dish-main-list-item">
-        <DishItem {...itemProps} />
+        <DishItem id={meal_id} {...itemProps} />
       </li>
     );
   });
