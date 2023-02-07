@@ -21,11 +21,12 @@ export default class App extends Component {
               <Route path="/" element={<Main />} />
               <Route path="/dishes" element={<Dishes />} />
               <Route path="/fridge" element={null} />
-              <Route path="/dish" element={<Dish />} />
+              <Route path="/dish" element={<Dish itemId={6} />} />
               <Route
                 path="/dish/:id"
                 render={({ match }) => {
                   const { id } = match.params;
+                  console.log(id);
                   return <Dish itemId={id} />;
                 }}
               />
