@@ -47,7 +47,7 @@ export default class Dish extends Component {
             <DishList num={3} />
           </div>
         </div>
-        <div className="background-dish"> .</div>
+        <div className="background-dish"></div>
       </div>
     );
   }
