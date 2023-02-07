@@ -9,10 +9,10 @@ import "./my-product.css";
 
 const MyProd = ({ data }) => {
   const elements = data.map((item) => {
-    const { ingredient_id, name, ...itemProps } = item;
+    const { ingredient_id, ...itemProps } = item;
     return (
       <li key={ingredient_id} className="dish-main-list-item">
-        {name}
+        <ProdItem {...itemProps} />
       </li>
     );
   });
@@ -31,13 +31,10 @@ const MyProd = ({ data }) => {
         <MyProdFilter />
         <AddButton />
       </div>
-      <div className="my-product-list">
-        <ProdItem />
-        <ProdItem />
-      </div>
+      <div className="my-product-list">{elements}</div>
     </div>
   );
 };
 
-const { getFriedge } = new MealService();
-export default withData(MyProd, getFriedge);
+const { getIngredient } = new MealService();
+export default withData(MyProd, getIngredient);
