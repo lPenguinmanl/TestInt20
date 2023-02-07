@@ -1,9 +1,8 @@
 * {
-  transition: all 1s;
+  transition: all 0.2s;
 }
 .main-div-main {
   background: none;
-  max-height: 90vmin;
   height: 100%;
 }
 .back-img-1 {

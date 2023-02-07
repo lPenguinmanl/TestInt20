@@ -3,33 +3,46 @@ import Dishes from "../dishes/dishes";
 import Dish from "../dish/dish";
 import Header from "../header";
 import Main from "../main";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ScrollToTop from "../scrol-to-top";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  useParams,
+  Switch,
+} from "react-router-dom";
 import "./app.css";
 import ErrorBoundry from "../error-boundry/error-boundry";
+import MyProd from "../my-product/my-product";
 
 export default class App extends Component {
   // mealService = new MealService();
-
+  state = {
+    search: "",
+  };
+  onSearchChange = (search) => {
+    this.setState({ search });
+  };
   render() {
+    const { search } = this.state;
     return (
       <ErrorBoundry>
         <BrowserRouter>
           {/* <MealServiceProvider value={this.mealService}> */}
           <div className="app">
-            <Header />
-            <Routes>
-              <Route path="/" element={<Main />} />
-              <Route path="/dishes" element={<Dishes />} />
-              <Route path="/fridge" element={null} />
-              <Route path="/dish" element={<Dish />} />
-              <Route
-                path="/dish/:id"
-                render={({ match }) => {
-                  const { id } = match.params;
-                  return <Dish itemId={id} />;
-                }}
-              />
-            </Routes>
+            <Header searchItems={this.onSearchChange} />
+            <ScrollToTop>
+              <Routes>
+                <Route path="/" element={<Main />} />
+                <Route
+                  exact
+                  path="/dishes"
+                  element={<Dishes search={search} />}
+                />
+                <Route path="/fridge" element={<MyProd />} />
+                <Route path="/dishes/:id" element={<DishWraper />} />
+              </Routes>
+            </ScrollToTop>
           </div>
           {/* </MealServiceProvider> */}
         </BrowserRouter>
@@ -37,3 +50,8 @@ export default class App extends Component {
     );
   }
 }
+
+const DishWraper = () => {
+  const { id } = useParams();
+  return <Dish itemId={id} />;
+};
