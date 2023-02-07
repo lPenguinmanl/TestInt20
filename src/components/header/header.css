@@ -22,13 +22,15 @@
   justify-content: center;
   text-align: center;
 }
-.hrefmain p,
-.hrefdish p,
-.hrefprod p {
+.hrefmain a,
+.hrefdish a,
+.hrefprod a {
   padding: 0rem;
   margin: auto;
   font-family: Josefin Sans, "Source Sans Pro";
-  font-size: 2vmin;
+  font-size: 3vmin;
+  text-decoration: none;
+  color: black;
 }
 .search input {
   height: 50%;

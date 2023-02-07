@@ -6,7 +6,7 @@ import { withData } from "../hoc-helpers";
 import "./dish-list.css";
 import ErrorBoundry from "../error-boundry/error-boundry";
 
-const DishList = ({ data, num }) => {
+const DishList = ({ data, num, view }) => {
   // const num = 7; // number of elements we want to get
   const shuffledArray = data.sort(() => 0.5 - Math.random()); // shuffles array
   const resData = shuffledArray.slice(0, num);
@@ -23,7 +23,7 @@ const DishList = ({ data, num }) => {
     <ErrorBoundry>
       <div className="dish-main-list">
         {elements}
-        <DishMainImg />
+        {view}
       </div>
     </ErrorBoundry>
   );

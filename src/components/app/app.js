@@ -27,15 +27,6 @@ export default class App extends Component {
               <Route path="/" element={<Main />} />
               <Route path="/dishes" element={<Dishes />} />
               <Route path="/fridge" element={null} />
-              {/* <Route
-                path="/dish"
-                element={
-                  <ErrorBoundry>
-                    <Dish itemId={4} />
-                  </ErrorBoundry>
-                }
-              /> */}
-
               <Route path="/dish/:id" element={<DishWraper />} />
             </Routes>
           </div>

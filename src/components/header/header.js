@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import "./header.css";
 
@@ -7,19 +8,19 @@ export default class Header extends Component {
     return (
       <div className="row header">
         <div className="col-0 col-md-1 col-lg-2"></div>
-        <div className="col-2 col-md-2 col-lg-1 dovboyob">
+        <div className="col-2 col-md-2 col-lg-1">
           <button className="hrefmain">
-            <p>Main</p>
+            <Link to="/">Main</Link>
           </button>
         </div>
         <div className="col-2 col-md-2 col-lg-1">
           <button className="hrefdish">
-            <p>Dishes</p>
+            <Link to="/dishes">Dishes</Link>
           </button>
         </div>
         <div className="col-2 col-md-2 col-lg-1">
           <button className="hrefprod">
-            <p>My products</p>
+            <Link to="/fridge">My products</Link>
           </button>
         </div>
         <div className="col-2 col-md-1 col-lg-1">

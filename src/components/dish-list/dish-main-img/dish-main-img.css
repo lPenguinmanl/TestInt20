@@ -23,3 +23,6 @@
   color: black;
   font-style: normal;
 }
+.dish-main-img-button a {
+  text-decoration: none;
+}
