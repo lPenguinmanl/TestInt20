@@ -2,12 +2,12 @@ import React from "react";
 
 import "./ostend-filter.css";
 
-const OstendFilter = ({ onOstendFilter }) => {
+const OstendFilter = ({ onOstendFilter, onClearFilter }) => {
   return (
     <div className="ostend-filter-div">
       <button
         className="ostend-filter-button active"
-        onClick={() => onOstendFilter(false)}
+        onClick={() => onClearFilter()}
       >
         <p>all</p>
       </button>

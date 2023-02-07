@@ -2,15 +2,16 @@ import React from "react";
 
 import "./compl-filter.css";
 
-const ComplFilter = ({ onDifficultyFilter }) => {
+const ComplFilter = ({ onDifficultyFilter, dfilter }) => {
   const a = [1, 2, 3, 4, 5];
   const elements = a.map((id) => {
+    const cls = id <= dfilter ? "star-filter-active" : "star-filter";
     return (
       <button
         className="star-filter-button"
         onClick={() => onDifficultyFilter(id)}
       >
-        <lable className="star-filter"></lable>
+        <lable className={cls}></lable>
       </button>
     );
   });

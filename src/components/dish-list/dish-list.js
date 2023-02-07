@@ -6,11 +6,24 @@ import { withData } from "../hoc-helpers";
 import "./dish-list.css";
 import ErrorBoundry from "../error-boundry/error-boundry";
 
-const DishList = ({ data, num, view, canCook, dfilter, search = "" }) => {
+// const canCook = ({ receipts }) => {
+//   receipts.forEach((el) => {
+//     if (el.stored_amount < el.amount) return false;
+//   });
+//   return true;
+// };
+
+const DishList = ({
+  data,
+  num,
+  view,
+  canCook = false,
+  dfilter = 0,
+  search = "",
+}) => {
   // const num = 7; // number of elements we want to get
   const shuffledArray = data.sort(() => 0.5 - Math.random()); // shuffles array
   const resData = shuffledArray.slice(0, num);
-
   const elements = resData
     .filter((el) => {
       const { meal_name } = el;
@@ -20,6 +33,16 @@ const DishList = ({ data, num, view, canCook, dfilter, search = "" }) => {
       const { difficulty } = el;
       if (dfilter == 0) return true;
       return difficulty == dfilter;
+    })
+    .filter(({ receipts }) => {
+      if (!canCook) return true;
+      const flag = receipts.every((el) => {
+        if (el.stored_amount < el.amount) {
+          return false;
+        }
+        return true;
+      });
+      return flag;
     })
     .map((item) => {
       const { meal_id, ...itemProps } = item;
