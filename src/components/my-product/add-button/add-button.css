@@ -6,7 +6,7 @@
 .add-button-group {
   width: 100%;
   display: flex;
-  flex-wrap: row wrap;
+  flex-wrap: wrap;
   margin-top: 1vmin;
   justify-content: flex-start;
 }
@@ -15,4 +15,25 @@
   border: solid 0.1rem black;
   border-radius: 1vmin;
   background-color: white;
+}
+.add-button-group-div {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem;
+  margin-left: 0rem;
+}
+.add-button-but {
+  width: 10rem;
+  height: 3rem;
+  background-color: rgb(65, 243, 184);
+  border-radius: 1rem;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.add-button-but span {
+  margin: auto;
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
 }

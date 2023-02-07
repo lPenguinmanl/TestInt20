@@ -3,30 +3,12 @@ import MealService from "../../../services/service-new";
 
 import "./add-button.css";
 
-export default class AddButton extends Component {
-  // mealService = new MealService();
-  // updateProduct() {
-  //   new_prod = {
-  //     name: "string",
-  //     image: "string",
-  //     category: "Vegetables",
-  //     stored_amount: 0,
-  //     measure: "pieces",
-  //     expiry_date: "2023-02-07",
-  //   };
-  //   this.mealService.putIngredient(id, new_prod);
-  // }
-
-  // handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   this.mealService.putIngredient(id, new_prod);
-  // };
-
-  render() {
-    return (
-      <div className="add-button">
-        <h3 className="add-button-text">Add Product On Your Freezer</h3>
-        <div className="add-button-group">
+const AddButton = () => {
+  return (
+    <div className="add-button">
+      <h3 className="add-button-text">Add Product On Your Freezer</h3>
+      <div className="add-button-group">
+        <div className="add-button-group-div">
           <h3 className="add-button-text-h">Product:</h3>
           <input
             className="add-button-input"
@@ -35,6 +17,9 @@ export default class AddButton extends Component {
             name="name-product"
             placeholder="Print product"
           ></input>
+        </div>
+
+        <div className="add-button-group-div">
           <h3 className="add-button-text-h">Value:</h3>
           <input
             className="add-button-input"
@@ -43,6 +28,9 @@ export default class AddButton extends Component {
             name="name-product"
             placeholder="Print product"
           ></input>
+        </div>
+
+        <div className="add-button-group-div">
           <h3 className="add-button-text-h">Expiration date:</h3>
           <input
             className="add-button-input"
@@ -51,11 +39,13 @@ export default class AddButton extends Component {
             name="name-product"
             placeholder="Print product"
           ></input>
-          <button className="add-button-but">
-            <span>To Add</span>
-          </button>
         </div>
+
+        <button className="add-button-but">
+          <span>To Add</span>
+        </button>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
+export default AddButton;

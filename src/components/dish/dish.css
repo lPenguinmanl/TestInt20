@@ -3,8 +3,7 @@
   top: 4.7rem;
   width: 100%;
   height: 100%;
-  background: no-repeat top -20vmin right -20vmin/ 100vmin url("https://cutt.ly/93tpWGv"),
-    no-repeat bottom -5vmin left -20vmin/ 100vmin url("https://cutt.ly/z3tab83"),
+  background: no-repeat bottom -5vmin left -20vmin/ 100vmin url("https://cutt.ly/z3tab83"),
     no-repeat bottom 20vmin right -20vmin/ 50vmin url("https://cutt.ly/V3tdx48");
   filter: opacity(25%);
 }
