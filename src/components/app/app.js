@@ -11,9 +11,10 @@ import {
   useParams,
   Switch,
 } from "react-router-dom";
-import "./app.css";
 import ErrorBoundry from "../error-boundry/error-boundry";
 import MyProd from "../my-product/my-product";
+import Footer from "../footer/footer";
+import "./app.css";
 
 export default class App extends Component {
   // mealService = new MealService();
@@ -43,6 +44,7 @@ export default class App extends Component {
                 <Route path="/dishes/:id" element={<DishWraper />} />
               </Routes>
             </ScrollToTop>
+            <Footer />
           </div>
           {/* </MealServiceProvider> */}
         </BrowserRouter>

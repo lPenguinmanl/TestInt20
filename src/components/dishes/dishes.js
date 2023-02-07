@@ -7,10 +7,21 @@ import "./dishes.css";
 
 export default class Dishes extends Component {
   state = {
-    dfilter: null,
-    canCook: true,
+    dfilter: 0,
+    canCook: false,
   };
-
+  onOstendFilter = (canCook) => {
+    this.setState({ canCook });
+  };
+  onDifficultyFilter = (dfilter) => {
+    this.setState({ dfilter });
+  };
+  onClearFilter = () => {
+    this.setState({
+      dfilter: 0,
+      canCook: false,
+    });
+  };
   render() {
     const { dfilter, canCook } = this.state;
     const { search } = this.props;
@@ -30,14 +41,20 @@ export default class Dishes extends Component {
             <div className="grid text-center filter">
               <div className="g-col-12 g-col-sm-12 g-col-md-6 g-col-lg-6 filter-ostend">
                 <h2>Ostend:</h2>
-                <OstendFilter />
+                <OstendFilter
+                  onOstendFilter={this.onOstendFilter}
+                  onClearFilter={this.onClearFilter}
+                />
               </div>
               <div className="g-col-12 g-col-sm-12 g-col-md-6 g-col-lg-6 filter-complexity">
                 <h2>Complexity:</h2>
-                <ComplFilter />
+                <ComplFilter
+                  onDifficultyFilter={this.onDifficultyFilter}
+                  dfilter={dfilter}
+                />
               </div>
             </div>
-            <DishList search={search} />
+            <DishList search={search} dfilter={dfilter} canCook={canCook} />
           </div>
           <div className="col-0 col-sm-1 col-md-1 col-lg-1"></div>
         </div>
