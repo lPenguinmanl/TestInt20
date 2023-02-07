@@ -28,4 +28,5 @@
   margin: 4vmin 10vmin 4vmin 10vmin;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
