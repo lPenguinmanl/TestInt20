@@ -6,6 +6,7 @@ import Main from "../main";
 import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
 import "./app.css";
 import ErrorBoundry from "../error-boundry/error-boundry";
+import MyProd from "../my-product/my-product";
 
 export default class App extends Component {
   // mealService = new MealService();
@@ -24,7 +25,7 @@ export default class App extends Component {
             <Routes>
               <Route path="/" element={<Main />} />
               <Route path="/dishes" element={<Dishes />} />
-              <Route path="/fridge" element={null} />
+              <Route path="/fridge" element={<MyProd />} />
               {/* <Route
                 path="/dish"
                 element={

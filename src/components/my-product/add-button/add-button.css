@@ -1,0 +1,18 @@
+.add-button {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1vmin;
+}
+.add-button-group {
+  width: 100%;
+  display: flex;
+  flex-wrap: row wrap;
+  margin-top: 1vmin;
+  justify-content: flex-start;
+}
+.add-button-input {
+  margin: 0vmin 3vmin 0vmin 3vmin;
+  border: solid 0.1rem black;
+  border-radius: 1vmin;
+  background-color: white;
+}
