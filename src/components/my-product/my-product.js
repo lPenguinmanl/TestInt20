@@ -39,11 +39,6 @@ class MyProd extends Component {
           <MyProdFilter onSetFilter={this.onSetFilter} />
         </div>
         <div className="my-product-list">{elements}</div>
-
-        <div className="filter-product">
-          <MyProdFilter />
-        </div>
-        <div className="my-product-list">{elements}</div>
         <MapProd />
       </div>
     );
