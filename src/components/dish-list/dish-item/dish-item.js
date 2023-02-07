@@ -17,6 +17,7 @@ const DishItem = ({ id, meal_name, meal_image, difficulty }) => {
           </Link>
         </button>
       </div>
+      <button className="dish-list-button">Review</button>
     </div>
   );
 };
