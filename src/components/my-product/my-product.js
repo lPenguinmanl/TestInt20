@@ -4,7 +4,16 @@ import MyProdFilter from "./my-product-filter/my-product-filter";
 
 import "./my-product.css";
 
-const MyProd = () => {
+const MyProd = ({ data }) => {
+  const elements = data.map((item) => {
+    const { ingredient_id, ...itemProps } = item;
+    return (
+      <li key={ingredient_id} className="dish-main-list-item">
+        ads
+      </li>
+    );
+  });
+
   return (
     <div className="my-product-div">
       <div className="my-product-div-img-text">
@@ -19,7 +28,7 @@ const MyProd = () => {
         <MyProdFilter />
         <AddButton />
       </div>
-      <div className="my-product-list"></div>
+      <div className="my-product-list">{elements}</div>
     </div>
   );
 };
