@@ -3,6 +3,7 @@ import MealService from "../../services/service-new";
 import { withData } from "../hoc-helpers";
 import AddButton from "./add-button/add-button";
 import MyProdFilter from "./my-product-filter/my-product-filter";
+import ProdItem from "./product-item";
 
 import "./my-product.css";
 
@@ -30,7 +31,9 @@ const MyProd = ({ data }) => {
         <MyProdFilter />
         <AddButton />
       </div>
-      <div className="my-product-list">{elements}</div>
+      <div className="my-product-list">
+        <ProdItem />
+      </div>
     </div>
   );
 };
