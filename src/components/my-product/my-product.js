@@ -1,4 +1,6 @@
 import React from "react";
+import MealService from "../../services/service-new";
+import { withData } from "../hoc-helpers";
 import AddButton from "./add-button/add-button";
 import MyProdFilter from "./my-product-filter/my-product-filter";
 
@@ -6,10 +8,10 @@ import "./my-product.css";
 
 const MyProd = ({ data }) => {
   const elements = data.map((item) => {
-    const { ingredient_id, ...itemProps } = item;
+    const { ingredient_id, name, ...itemProps } = item;
     return (
       <li key={ingredient_id} className="dish-main-list-item">
-        ads
+        {name}
       </li>
     );
   });
@@ -32,4 +34,6 @@ const MyProd = ({ data }) => {
     </div>
   );
 };
-export default MyProd;
+
+const { getFriedge } = new MealService();
+export default withData(MyProd, getFriedge);

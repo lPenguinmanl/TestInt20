@@ -16,7 +16,9 @@ import MyProd from "../my-product/my-product";
 
 export default class App extends Component {
   // mealService = new MealService();
-
+  state = {
+    search: "",
+  };
   render() {
     return (
       <ErrorBoundry>
@@ -26,7 +28,7 @@ export default class App extends Component {
             <Header />
             <Routes>
               <Route path="/" element={<Main />} />
-              <Route path="/dishes" element={<Dishes />} />
+              <Route exact path="/dishes" element={<Dishes />} />
               <Route path="/fridge" element={<MyProd />} />
               <Route path="/dishes/:id" element={<DishWraper />} />
             </Routes>

@@ -76,7 +76,7 @@ export default class MealService {
   };
 
   getFriedge = async () => {
-    const res = await this.getResourse(`/friedge/`);
+    const res = await this.getResourse(`/fridge/`);
     return res;
   };
 

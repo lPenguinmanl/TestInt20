@@ -16,6 +16,7 @@ export default class Dish extends Component {
   componentDidMount() {
     this.onLoad();
   }
+
   onLoad() {
     const { itemId } = this.props;
     if (!itemId) {
