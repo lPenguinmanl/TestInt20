@@ -20,9 +20,9 @@
 }
 .dish-name h3 {
   font-family: "Cormorant Infant";
-  font-style: normal;
   font-weight: 400;
-  font-size: 5vmin;
+  font-size: 6vmin;
+  font-weight: bold;
   color: black;
 }
 .dish-content {
@@ -32,9 +32,11 @@
   text-align: center;
 }
 .try-it {
+  margin-top: 4vmin;
   font-family: "Cormorant Infant";
   font-style: normal;
   font-weight: 400;
+  font-weight: bold;
   font-size: 5vmin;
 }
 .dish-try-it {
