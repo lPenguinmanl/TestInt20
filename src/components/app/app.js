@@ -27,7 +27,6 @@ export default class App extends Component {
             <Routes>
               <Route path="/" element={<Main />} />
               <Route path="/dishes" element={<Dishes />} />
-              <Route path="/fridge" element={null} />
               <Route path="/fridge" element={<MyProd />} />
               {/* <Route
                 path="/dish"
