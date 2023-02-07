@@ -11,6 +11,7 @@
   width: 10vmin;
   height: 4vmin;
   margin-right: 4vmin;
+  padding: auto;
   border: none;
 }
 .ostend-filter-button p {

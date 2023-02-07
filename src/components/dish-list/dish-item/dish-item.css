@@ -43,7 +43,7 @@
 }
 .dish-list-button {
   max-width: 13vmin;
-  margin: auto;
+  margin: 1vmin auto 3vmin auto;
   width: 100%;
   background-color: white;
   border: solid 0.1rem black;

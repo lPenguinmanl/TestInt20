@@ -10,8 +10,8 @@ const DishItem = ({ meal_name, meal_image, difficulty }) => {
         <img className="dish-list-img" src={imageUrl} alt={meal_name}></img>
         <h4>{meal_name}</h4>
         <ListDif compl={difficulty} />
-        <button className="dish-list-button">Review</button>
       </div>
+      <button className="dish-list-button">Review</button>
     </div>
   );
 };
