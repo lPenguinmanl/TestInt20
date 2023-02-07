@@ -24,3 +24,13 @@
 .dishes-dishlist-row {
   margin-top: 2vmin;
 }
+.filter-ostend {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.filter-complexity {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
