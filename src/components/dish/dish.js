@@ -6,6 +6,7 @@ import DishList from "../dish-list";
 import MealService from "../../services/service-new";
 
 import "./dish.css";
+import Spinner from "../spiner";
 
 export default class Dish extends Component {
   mealService = new MealService();
@@ -15,17 +16,20 @@ export default class Dish extends Component {
   componentDidMount() {
     this.onLoad();
   }
-  onLoad = () => {
+  onLoad() {
     const { itemId } = this.props;
     if (!itemId) {
       return;
     }
     this.mealService.getMealById(itemId).then((data) => {
+      console.log(data);
       this.setState({ data });
     });
-  };
+  }
   render() {
-    const { meal_name } = this.state.data;
+    const { data } = this.state;
+    if (!data) return <Spinner />;
+    const { meal_name, meal_image, receipt, receipts } = data;
     return (
       <div className="main-dish">
         <div className="dish">
@@ -33,10 +37,10 @@ export default class Dish extends Component {
             <h3>{meal_name}</h3>
           </div>
           <div className="dish-content">
-            <DishImg />
-            <ProdLi />
+            <DishImg imgUrl={meal_image} />
+            <ProdLi products={receipts} />
           </div>
-          <DishRecipe />
+          <DishRecipe receipt={receipt} />
           <h3 className="try-it">Also try it:</h3>
           <div className="dish-try-it">
             <DishList num={3} />
