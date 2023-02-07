@@ -39,10 +39,14 @@ const AddButton = () => {
             placeholder="Print product"
           ></input>
         </div>
-
-        <button className="add-button-but">
-          <span>To Add</span>
-        </button>
+        <div className="add-button-group-div">
+          <button className="add-button-but">
+            <span>To Add</span>
+          </button>
+          <button className="add-button-remove">
+            <span>Remove</span>
+          </button>
+        </div>
       </div>
     </div>
   );

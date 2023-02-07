@@ -37,3 +37,18 @@
   font-weight: 400;
   font-size: 2rem;
 }
+.add-button-remove {
+  width: 10rem;
+  height: 3rem;
+  background-color: rgb(243, 65, 89);
+  border-radius: 1rem;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.add-button-remove span {
+  margin: auto;
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+}

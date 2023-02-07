@@ -33,6 +33,7 @@ const MyProd = ({ data }) => {
       </div>
       <div className="my-product-list">
         <ProdItem />
+        <ProdItem />
       </div>
     </div>
   );
