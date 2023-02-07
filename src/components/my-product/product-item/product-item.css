@@ -30,6 +30,7 @@
   color: #123f0a;
 }
 .product-item-value {
+  width: 80%;
   font-family: "Josefin Sans";
   font-style: normal;
   font-weight: 400;
@@ -37,7 +38,8 @@
   line-height: 20px;
   color: black;
   opacity: 50%;
-  margin-top: 1rem;
+  border-radius: 1rem;
+  margin: 1rem auto 0rem auto;
 }
 .expiry-date {
   color: black;
