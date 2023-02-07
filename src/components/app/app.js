@@ -3,22 +3,18 @@ import Dishes from "../dishes/dishes";
 import Dish from "../dish/dish";
 import Header from "../header";
 import Main from "../main";
-import { Routes, Route } from "react-router-dom";
-import {
-  MealServiceProvider,
-  MealServiceConsumer,
-} from "../swapi-service-context/swapi-service-context";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./app.css";
 import ErrorBoundry from "../error-boundry/error-boundry";
-import MealService from "../../services/dummy-service";
 
-export class App extends Component {
-  mealService = new MealService();
+export default class App extends Component {
+  // mealService = new MealService();
 
   render() {
     return (
       <ErrorBoundry>
-        <MealServiceProvider value={this.mealService}>
+        <BrowserRouter>
+          {/* <MealServiceProvider value={this.mealService}> */}
           <div className="app">
             <Header />
             <Routes>
@@ -35,10 +31,9 @@ export class App extends Component {
               />
             </Routes>
           </div>
-        </MealServiceProvider>
+          {/* </MealServiceProvider> */}
+        </BrowserRouter>
       </ErrorBoundry>
     );
   }
 }
-
-export default App;

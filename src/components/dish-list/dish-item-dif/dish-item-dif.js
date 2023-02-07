@@ -3,11 +3,8 @@ import React, { Component } from "react";
 import "./dish-item-dif.css";
 
 export default class ListDif extends Component {
-  state = {
-    compl: 3,
-  };
   render() {
-    const { compl } = this.state;
+    const { compl } = this.props;
 
     const a = ["", "", "", "", ""];
     const arr = a.map((el, index) => {
