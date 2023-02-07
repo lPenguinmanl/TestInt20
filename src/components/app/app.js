@@ -3,6 +3,7 @@ import Dishes from "../dishes/dishes";
 import Dish from "../dish/dish";
 import Header from "../header";
 import Main from "../main";
+import ScrollToTop from "../scrol-to-top";
 import {
   BrowserRouter,
   Routes,
@@ -26,12 +27,14 @@ export default class App extends Component {
           {/* <MealServiceProvider value={this.mealService}> */}
           <div className="app">
             <Header />
-            <Routes>
-              <Route path="/" element={<Main />} />
-              <Route exact path="/dishes" element={<Dishes />} />
-              <Route path="/fridge" element={<MyProd />} />
-              <Route path="/dishes/:id" element={<DishWraper />} />
-            </Routes>
+            <ScrollToTop>
+              <Routes>
+                <Route path="/" element={<Main />} />
+                <Route exact path="/dishes" element={<Dishes />} />
+                <Route path="/fridge" element={<MyProd />} />
+                <Route path="/dishes/:id" element={<DishWraper />} />
+              </Routes>
+            </ScrollToTop>
           </div>
           {/* </MealServiceProvider> */}
         </BrowserRouter>
