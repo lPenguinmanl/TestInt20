@@ -1,38 +1,52 @@
 * {
-  transition: all 1s;
+  transition: all 0.2s;
 }
 .main-div-main {
-  max-height: 90vmin;
+  background: none;
+  height: 100%;
+}
+.back-img-1 {
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  background: no-repeat url("https://cutt.ly/Y98ZuZJ");
+  filter: opacity(25%);
+  background-size: 50vmin;
+  max-width: 100vmin;
+  max-height: 100vmin;
+  width: 100%;
+  height: 100%;
+}
+.back-img-2 {
+  background: no-repeat url("https://cutt.ly/u98LKfI");
+  background-size: 50vmin;
+  filter: opacity(25%);
+  position: absolute;
+  left: 75%;
+  bottom: -20%;
+  max-width: 100vmin;
+  max-height: 100vmin;
+  width: 100%;
   height: 100%;
 }
 .list-m {
-  background-image: url("https://cutt.ly/Y98ZuZJ"),
-    url("https://cutt.ly/u98LKfI");
   height: 100%;
   max-height: 210vmin;
   background-position: left;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0);
   position: relative;
 }
 
 .main-img {
-  max-height: 50vmin;
   width: 100%;
-  justify-content: center;
-  text-align: center;
-  position: relative;
-}
-.main-img::after {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 1);
+  max-height: 60vmin;
+  overflow: hidden;
 }
 .main-text h1 {
   font-family: "Cormorant Infant";
   font-style: normal;
   font-weight: 700;
-  font-size: 80px;
+  font-size: 10vmin;
   line-height: 5vmin;
   /* identical to box height */
   text-align: center;
@@ -44,7 +58,7 @@
   font-family: "Cormorant Infant";
   font-style: normal;
   font-weight: 400;
-  font-size: 40px;
+  font-size: 3vmin;
   line-height: 48px;
   text-align: center;
   color: aliceblue;
@@ -52,13 +66,19 @@
   line-height: 5vmin;
 }
 .main-img img {
-  display: flex;
   width: 100%;
+  filter: brightness(40%);
 }
 .main-text {
   text-align: center;
-  position: relative;
-  top: -120vmin;
+  position: absolute;
+  top: 27vmin;
+  width: 100%;
+  color: white;
+  font-family: "Cormorant Infant";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10vmin;
 }
 .dish-list-main {
   display: flex;
@@ -71,85 +91,4 @@
   font-size: 5vmin;
   margin-bottom: 0rem;
   padding-left: 2vmin;
-}
-@media only screen and (max-width: 370px) {
-  .main-text {
-    position: relative;
-    top: -50vmin;
-  }
-  .main-text p {
-    font-size: 20px;
-    font-weight: 300;
-  }
-  .main-text h1 {
-    font-weight: 300;
-    font-size: 40px;
-  }
-  .main-div-main {
-    max-height: 130vmin;
-    height: 100%;
-  }
-}
-@media only screen and (max-width: 480px) and (min-width: 370px) {
-  .main-text {
-    position: relative;
-    top: -15rem;
-  }
-  .main-text p {
-    font-size: 20px;
-    font-weight: 300;
-  }
-  .main-text h1 {
-    font-weight: 300;
-    font-size: 40px;
-  }
-  .main-img {
-    height: 50vmin;
-  }
-  .main-div-main {
-    max-height: 130vmin;
-    height: 100%;
-  }
-}
-@media only screen and (max-width: 770px) and (min-width: 480px) {
-  .main-text {
-    position: relative;
-    top: -55vmin;
-  }
-  .main-text p {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-  .main-img {
-    max-height: 50vmin;
-  }
-  .main-div-main {
-    max-height: 165vmin;
-    height: 100%;
-  }
-}
-@media only screen and (max-width: 1025px) and (min-width: 770px) {
-  .main-text {
-    position: relative;
-    top: -35rem;
-  }
-  .main-div-main {
-    max-height: 165vmin;
-    height: 100%;
-  }
-}
-@media only screen and (max-width: 1440px) and (min-width: 1025px) {
-  .main-img {
-    max-height: 50vmin;
-  }
-  .main-text {
-    position: relative;
-    top: -80vmin;
-  }
-}
-@media only screen and (max-width: 1700px) and (min-width: 1440px) {
-  .main-text {
-    position: relative;
-    top: -105vmin;
-  }
 }

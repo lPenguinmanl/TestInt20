@@ -1,14 +1,8 @@
-.dishimg {
+.dish-img {
   display: flex;
-  flex-direction: column;
+  width: 55vmin;
+  height: 55vmin;
 }
-.dishimge img {
-  text-align: center;
-  width: 100%;
-  max-width: 700px;
-  border-radius: 0.5rem;
-  margin: 1rem;
-}
-.dishimg div {
-  margin: 1rem;
+.dish-img img {
+  border-radius: 10%;
 }

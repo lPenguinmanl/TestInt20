@@ -1,25 +1,22 @@
 import React from "react";
-import ProdIt from "./product-item";
 
 import "./product-list.css";
 
-const ProdLi = () => {
+const ProdLi = ({ products }) => {
+  const elements = products.map(({ name, amount, measure, stored_amount }) => {
+    const cls = amount >= stored_amount ? "prod-li" : "prod-li-yes";
+    return (
+      <li className={cls}>
+        <span>
+          {name} {amount} {measure}
+        </span>
+      </li>
+    );
+  });
   return (
-    <div className="prodli">
-      <div className="justify-content-center prodlicont">
-        <span>Назва страви</span>
-      </div>
-      <div className="row align-items-start prodlicont">
-        <div className="col-sm-12 col-md-6 col-lg-4 licont">
-          <ProdIt />
-        </div>
-        <div className="col-sm-12 col-md-6 col-lg-4 licont">
-          <ProdIt />
-        </div>
-        <div className="col-sm-12 col-md-6 col-lg-4 licont">
-          <ProdIt />
-        </div>
-      </div>
+    <div className="prod-lu-div">
+      <h3>The ingredients:</h3>
+      <ul className="prod-lu">{elements}</ul>
     </div>
   );
 };

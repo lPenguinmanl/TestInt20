@@ -1,9 +1,11 @@
 .dish-main-img-button {
   background: none;
   width: 27vmin;
-  height: 34.5vmin;
-  padding: 3vmin 0vmin 0vmin 1.5vmin;
+  height: 35vmin;
+  padding: 5vmin 0vmin 0vmin 1.5vmin;
   border: none;
+  position: relative;
+  top: -3vmin;
 }
 
 .dish-main-img-div {
@@ -20,4 +22,7 @@
   top: -30vmin;
   color: black;
   font-style: normal;
+}
+.dish-main-img-button a {
+  text-decoration: none;
 }

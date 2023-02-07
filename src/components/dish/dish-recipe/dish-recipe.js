@@ -2,13 +2,12 @@ import React, { Component } from "react";
 
 import "./dish-recipe.css";
 
-export default class DishRecipe extends Component {
-  render() {
-    return (
-      <div className="dishrecipe">
-        <h3 className="htext">рецепт</h3>
-        <span className="rectext">Тут повинен бути рецепт</span>
-      </div>
-    );
-  }
-}
+const DishRecipe = ({ receipt }) => {
+  return (
+    <div className="dish-recipe-div">
+      <h3>Method of cooking:</h3>
+      <p className="dish-recipe">{receipt}</p>
+    </div>
+  );
+};
+export default DishRecipe;
