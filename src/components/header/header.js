@@ -8,16 +8,22 @@ export default class Header extends Component {
       <div className="row header">
         <div className="col-0 col-md-1 col-lg-2"></div>
         <div className="col-2 col-md-2 col-lg-1 dovboyob">
-          <a className="hrefmain">Main</a>
+          <button className="hrefmain">
+            <p>Main</p>
+          </button>
         </div>
         <div className="col-2 col-md-2 col-lg-1">
-          <a className="hrefdish">Dishes</a>
+          <button className="hrefdish">
+            <p>Dishes</p>
+          </button>
         </div>
         <div className="col-2 col-md-2 col-lg-1">
-          <a className="hrefprod">My products</a>
+          <button className="hrefprod">
+            <p>My products</p>
+          </button>
         </div>
         <div className="col-2 col-md-1 col-lg-1">
-          <button onClick={AlertClick} className="butadd">
+          <button className="butadd">
             <p className="butaddp">Add Dish</p>
           </button>
         </div>
@@ -34,11 +40,3 @@ export default class Header extends Component {
     );
   }
 }
-
-const AlertClick = () => {
-  alert(
-    <form>
-      <p>Add Form</p>
-    </form>
-  );
-};

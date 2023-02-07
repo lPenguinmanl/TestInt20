@@ -10,13 +10,26 @@
 .hrefmain,
 .hrefdish,
 .hrefprod {
-  color: black;
   text-decoration: none;
-  padding-top: 1rem;
-  text-align: center;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  outline: inherit;
+  font-weight: bold;
+  line-height: 1;
+  margin: auto;
   justify-content: center;
+  text-align: center;
+}
+.hrefmain p,
+.hrefdish p,
+.hrefprod p {
+  padding: 0rem;
+  margin: auto;
   font-family: Josefin Sans, "Source Sans Pro";
-  font-size: 1.2rem;
+  font-size: 2vmin;
 }
 .search input {
   height: 50%;
@@ -32,18 +45,12 @@
   border: solid 0.1rem black;
   margin: auto;
   border-radius: 1rem;
+  cursor: pointer;
 }
 .header div {
   display: flex;
   text-align: center;
   justify-content: center;
-}
-.header div button p {
-  justify-content: center;
-  text-align: center;
-  margin: 0rem;
-  font-family: Josefin sans;
-  font-size: 1.2rem;
 }
 .search {
   display: flex;
@@ -70,51 +77,12 @@
   display: flex;
   margin-top: 10px;
 }
-@media only screen and (max-width: 470px) {
-  .header div a {
-    text-align: center;
-    justify-content: center;
-    font-family: Josefin Sans, "Source Sans Pro";
-    font-size: 1.2rem;
-  }
-  .hrefmain,
-  .hrefdish {
-    padding-top: 14px;
-  }
-  .hrefprod {
-    line-height: 1.5rem;
-    padding-top: 5px;
-  }
-  .butaddp {
-    padding: 0px;
-    line-height: 1.5rem;
-  }
-}
-@media only screen and (max-width: 770px) and (min-width: 470px) {
-  .butaddp {
-    padding: 2px;
-    line-height: 1rem;
-  }
-}
-@media only all and (max-width: 1024px) and (min-width: 770px) {
-  .butaddp {
-    padding: 2px;
-    line-height: 1.3rem;
-  }
-}
-@media only all and (max-width: 1440px) and (min-width: 1024px) {
-  .hrefprod {
-    line-height: 1.5rem;
-    padding-top: 10px;
-  }
-  .hrefmain {
-    padding-top: 22px;
-  }
-  .hrefdish {
-    padding-top: 22px;
-  }
-  .butaddp {
-    padding: 4px;
-    line-height: 1.3rem;
-  }
+.butaddp {
+  line-height: 1;
+  justify-content: center;
+  text-align: center;
+  margin: 0rem;
+  font-family: Josefin sans;
+  font-size: 2vmin;
+  font-weight: bold;
 }
