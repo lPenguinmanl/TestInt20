@@ -8,9 +8,12 @@ const ProdItem = ({
   measure,
   ingredient_image,
   expiry_date,
+  category,
+  filter,
 }) => {
   const currentDate = new Date().toJSON().slice(0, 10);
   const cls = expiry_date >= currentDate ? "expiry-date" : "expiry-date red";
+  if (filter !== "Any" && filter !== category) return null;
   return (
     <div className="product-item">
       <div className="product-item-text">
