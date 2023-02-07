@@ -13,7 +13,7 @@ const DishItem = ({ id, meal_name, meal_image, difficulty }) => {
         <ListDif compl={difficulty} />
       </div>
       <button className="dish-list-button">
-        <Link to={`../dishes/${id}`} relative="path">
+        <Link to={`../../dishes/${id}`} relative="path">
           Review
         </Link>
       </button>

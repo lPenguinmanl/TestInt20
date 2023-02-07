@@ -14,10 +14,15 @@ export default class Dish extends Component {
     data: null,
   };
   componentDidMount() {
-    this.onLoad();
+    this.updateItem();
+  }
+  componentDidUpdate(prevProps) {
+    if (this.props.itemId !== prevProps.itemId) {
+      this.updateItem();
+    }
   }
 
-  onLoad() {
+  updateItem() {
     const { itemId } = this.props;
     if (!itemId) {
       return;
