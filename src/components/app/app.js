@@ -1,21 +1,39 @@
-
-import React from "react";
+import React, { Component } from "react";
+import Dishes from "../dishes/dishes";
 import Dish from "../dish/dish";
-import DropMealFilter from '../drop-meal-fiter';
+import Header from "../header";
+import Main from "../main";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./app.css";
+import ErrorBoundry from "../error-boundry/error-boundry";
 
-const App = () => {
-  return (
-    <div className="app">
-    <DropMealFilter/>
-      <div className="row">
-        <div className="col-1 col-sm-1 col-md-2 col-lg-3"></div>
-        <div className="col-10 col-sm-10 col-md-8 col-lg-6">
-          <Dish />
-        </div>
-        <div className="col-1 col-sm-1 col-md-2 col-lg-3"></div>
-      </div>
-    </div>
-  )
+export default class App extends Component {
+  // mealService = new MealService();
+
+  render() {
+    return (
+      <ErrorBoundry>
+        <BrowserRouter>
+          {/* <MealServiceProvider value={this.mealService}> */}
+          <div className="app">
+            <Header />
+            <Routes>
+              <Route path="/" element={<Main />} />
+              <Route path="/dishes" element={<Dishes />} />
+              <Route path="/fridge" element={null} />
+              <Route path="/dish" element={<Dish />} />
+              <Route
+                path="/dish/:id"
+                render={({ match }) => {
+                  const { id } = match.params;
+                  return <Dish itemId={id} />;
+                }}
+              />
+            </Routes>
+          </div>
+          {/* </MealServiceProvider> */}
+        </BrowserRouter>
+      </ErrorBoundry>
+    );
+  }
 }
-export default App;
